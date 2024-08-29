@@ -3,9 +3,9 @@
     "name": "fruit_hub_native",
     "slug": "fruit_hub_native",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "fruit_hub_native",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
