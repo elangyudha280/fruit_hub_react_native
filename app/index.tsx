@@ -37,7 +37,7 @@ const HomePage = ()=>{
                         We deliver the best and freshest fruit salad in town. Order for a combo today!!!
                         </Text>
                         {/* button */}
-                        <Link href={'/'} className='group-isolate text-white bg-c-orange-200 rounded-md p-4 active:bg-transparent active:border-[1px] active:border-c-orange-200 active:text-c-orange-200 transition-all duration-300 text-center' >
+                        <Link href={'login/'} className='group-isolate text-white bg-c-orange-200 rounded-md p-4 active:bg-transparent active:border-[1px] active:border-c-orange-200 active:text-c-orange-200  text-center' >
                             Let’s Continue
                         </Link>
                     </View>
@@ -46,7 +46,7 @@ const HomePage = ()=>{
             </ScrollView>
         </SafeAreaView>
 
-        <StatusBar translucent={false} />
+    <StatusBar translucent={false} backgroundColor={'#FFA451'} barStyle={'light-content'}/>
     </>
   )
 }
