@@ -9,9 +9,11 @@ import {Link, router} from 'expo-router'
 import dataMakanan from '@/data/food'
 import formatRupiah from '@/utils/formatRupiah'
 import Swiper from 'react-native-swiper'
+import useUser from '@/store/user'
+import { State } from 'react-native-gesture-handler'
 function PageDashboard() {
 
-
+    let name = useUser((state:any) => state.name)
     const goToDetail = (id:number|string)=>{
         router.push(`dashboard/detail/${id}`)
     }
@@ -36,7 +38,7 @@ function PageDashboard() {
                 <View className='relative px-5 w-full pb-8'>
                     {/*//! title */}
                     <Text className='text-[23px] text-c-iris-200'>
-                        Hello Kante, <Text className='font-medium text-c-iris-500'>What fruit salad combo do you want today?</Text>
+                        Hello {name === '' || name === undefined ? 'Guest' : name}, <Text className='font-medium text-c-iris-500'>What fruit salad combo do you want today?</Text>
                     </Text>
 
                     {/*//! input search */}

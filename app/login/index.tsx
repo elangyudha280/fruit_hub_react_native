@@ -7,7 +7,7 @@ import {StyledComponent} from 'nativewind'
 
 // import utils
 import {Link, router} from 'expo-router'
-
+import useUser from '@/store/user'
 interface firstnameInterface {
   error:boolean,
   value:string
@@ -20,6 +20,8 @@ function PageLogin()  {
     value:''
   })
 
+  const setName : any = useUser((state:any) => state.setName)
+
   // event handle submit
   const handleSubmit = ()=>{
     if(firstname.value.trim() === ''){
@@ -31,6 +33,7 @@ function PageLogin()  {
     }
 
     // arahkan ke dashboard
+    setName(firstname.value)
       router.replace('/dashboard')
   }
 
