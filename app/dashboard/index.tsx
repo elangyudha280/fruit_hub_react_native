@@ -10,10 +10,15 @@ import dataMakanan from '@/data/food'
 import formatRupiah from '@/utils/formatRupiah'
 import Swiper from 'react-native-swiper'
 function PageDashboard() {
+
+
+    const goToDetail = (id:number|string)=>{
+        router.push(`dashboard/detail/1`)
+    }
   return (
     <>
         <SafeAreaView>
-            <ScrollView className='relative h-full w-full'>
+            <ScrollView className='relative h-full w-full bg-white'>
                 {/*//! navbar */}
                 <View className='relative w-full flex flex-row justify-center  p-2 '>
                     {/* navbar container */}
@@ -57,7 +62,9 @@ function PageDashboard() {
                             {
                                 dataMakanan?.map((el,index)=>{
                                     return (
-                                        <View className={`relative w-full h-full h-fuk p-5 rounded-md  bg-[${el.color}]`} key={el.id}>
+                                        <Pressable
+                                        onPress={()=>{goToDetail(el.id)}}
+                                        className={`relative w-full h-full  p-5 rounded-md  bg-[${el.color}]`} key={el.id}>
                                                  <Image source={require('@/assets/images/love_orange.png')} className='scale-150 absolute right-5 top-[20px]'/>
                                                 {/* header */}
                                                 <View className='w-full flex items-center'>
@@ -75,7 +82,7 @@ function PageDashboard() {
                                                         <Image source={require('@/assets/images/plus_orange.png')} className='scale-150'/>
                                                             </Pressable>    
                                                     </View>
-                                        </View>
+                                        </Pressable>
                                     )
                                 })
                             }
