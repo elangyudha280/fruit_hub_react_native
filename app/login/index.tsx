@@ -31,7 +31,7 @@ function PageLogin()  {
     }
 
     // arahkan ke dashboard
-      router.replace('/')
+      router.replace('/dashboard')
   }
 
   return (
