@@ -47,7 +47,6 @@ function PageLogin()  {
                 <Image source={require('@/assets/images/fruit_bucket2.png')} className=''/>
                 <Image source={require('@/assets/images/ellipse1.png')} className='mt-2'/>
               </View>
-
             </View>
 
             {/* bottom */}

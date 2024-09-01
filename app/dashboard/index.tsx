@@ -13,12 +13,12 @@ function PageDashboard() {
 
 
     const goToDetail = (id:number|string)=>{
-        router.push(`dashboard/detail/1`)
+        router.push(`dashboard/detail/${id}`)
     }
   return (
     <>
         <SafeAreaView>
-            <ScrollView className='relative h-full w-full bg-white'>
+            <ScrollView className='relative h-full w-full bg-white z-[10]'>
                 {/*//! navbar */}
                 <View className='relative w-full flex flex-row justify-center  p-2 '>
                     {/* navbar container */}
@@ -64,7 +64,7 @@ function PageDashboard() {
                                     return (
                                         <Pressable
                                         onPress={()=>{goToDetail(el.id)}}
-                                        className={`relative w-full h-full  p-5 rounded-md  bg-[${el.color}]`} key={el.id}>
+                                        className={`relative w-full h-full  p-5 rounded-md !bg-[${el.color}]`} key={el.id}>
                                                  <Image source={require('@/assets/images/love_orange.png')} className='scale-150 absolute right-5 top-[20px]'/>
                                                 {/* header */}
                                                 <View className='w-full flex items-center'>

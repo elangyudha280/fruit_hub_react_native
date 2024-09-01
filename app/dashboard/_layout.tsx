@@ -6,7 +6,9 @@ const LayoutDetail = ()=>{
          <Stack.Screen name='index' options={{
             headerShown:false
          }} />
-        <Stack.Screen name='detail/[id]' />
+        <Stack.Screen name='detail/[id]' options={{
+            headerShown:false
+         }}/>
     </Stack>
     )
 }

@@ -14,7 +14,7 @@ const dataMakanan : food[] = [
         title:"Honey lime combo",
         poster:require('@/assets/images/food1.png'),
         price:2000,
-        color:'#f5c8de92'
+        color:'#f8a1cb36'
     },
     {
         id:2,
@@ -28,7 +28,7 @@ const dataMakanan : food[] = [
         title:"Quinoa fruit salad",
         poster:require('@/assets/images/food3.png'),
         price:8000,
-        color:'#9267fc1b'
+        color:'rgba(145,103,252,0.12)'
     }
 ]
 
