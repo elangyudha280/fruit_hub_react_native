@@ -53,12 +53,12 @@ function PageDashboard() {
                         <Swiper showsButtons={false}
                             showsPagination={false}
                             height={240}
-
                         >
                             {
                                 dataMakanan?.map((el,index)=>{
                                     return (
                                         <View className={`relative w-full h-full h-fuk p-5 rounded-md  bg-[${el.color}]`} key={el.id}>
+                                                 <Image source={require('@/assets/images/love_orange.png')} className='scale-150 absolute right-5 top-[20px]'/>
                                                 {/* header */}
                                                 <View className='w-full flex items-center'>
                                                     <Image source={el.poster} className='w-[100px] h-[100px]'/>
