@@ -64,7 +64,7 @@ function PageDashboard() {
                                     return (
                                         <Pressable
                                         onPress={()=>{goToDetail(el.id)}}
-                                        className={`relative w-full h-full  p-5 rounded-md !bg-[${el.color}]`} key={el.id}>
+                                        className={`relative w-full h-full  p-5 rounded-md bg-[${el.color}]`} key={el.id}>
                                                  <Image source={require('@/assets/images/love_orange.png')} className='scale-150 absolute right-5 top-[20px]'/>
                                                 {/* header */}
                                                 <View className='w-full flex items-center'>
