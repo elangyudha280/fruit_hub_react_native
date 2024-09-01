@@ -1,5 +1,5 @@
 function formatRupiah(angka:number):any {
-    return new Intl.NumberFormat('id-ID', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
       currency: 'IDR',
       minimumFractionDigits: 0,
