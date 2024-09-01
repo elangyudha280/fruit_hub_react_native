@@ -2,11 +2,13 @@ import React from 'react'
 
 // import component
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { ScrollView,View,StatusBar,Image, Pressable,Text,TextInput } from 'react-native'
+import { ScrollView,View,StatusBar,Image, Pressable,Text,TextInput,FlatList } from 'react-native'
 
 // import utils
 import {Link, router} from 'expo-router'
-
+import dataMakanan from '@/data/food'
+import formatRupiah from '@/utils/formatRupiah'
+import Swiper from 'react-native-swiper'
 function PageDashboard() {
   return (
     <>
@@ -26,7 +28,7 @@ function PageDashboard() {
                 </View>
 
                 {/*//! content */}
-                <View className='relative px-5 w-full'>
+                <View className='relative px-5 w-full pb-8'>
                     {/*//! title */}
                     <Text className='text-[23px] text-c-iris-200'>
                         Hello Kante, <Text className='font-medium text-c-iris-500'>What fruit salad combo do you want today?</Text>
@@ -47,6 +49,38 @@ function PageDashboard() {
                     {/*//! card content */}
                     <View className='relative w-full mt-7'>
                         <Text className='text-c-iris-500 text-2xl  font-bold'>Recommended Combo</Text>
+                        <View className='mt-4 '>
+                        <Swiper showsButtons={false}
+                            showsPagination={false}
+                            height={240}
+
+                        >
+                            {
+                                dataMakanan?.map((el,index)=>{
+                                    return (
+                                        <View className={`relative w-full h-full h-fuk p-5 rounded-md  bg-[${el.color}]`} key={el.id}>
+                                                {/* header */}
+                                                <View className='w-full flex items-center'>
+                                                    <Image source={el.poster} className='w-[100px] h-[100px]'/>
+                                                </View>
+                                                <Text className='text-center mt-3 text-[20px] font-bold line-clamp-1'>{el.title}</Text>
+                                                    <View className='flex-1 flex flex-row justify-center items-center box-border mt-3 w-full '>
+                                                        <View className='flex-1  h-full flex flex-row items-center'>
+                                                          <Text className=' text-c-orange-200 text-[20px] font-medium'>
+                                                             {formatRupiah(el.price)}
+                                                          </Text>
+                                                        </View> 
+
+                                                        <Pressable className='w-[50px] h-full bg-c-orange-200/20 rounded-full flex justify-center items-center'>
+                                                        <Image source={require('@/assets/images/plus_orange.png')} className='scale-150'/>
+                                                            </Pressable>    
+                                                    </View>
+                                        </View>
+                                    )
+                                })
+                            }
+                        </Swiper>
+                        </View>
                     </View>
                 </View>
                 
