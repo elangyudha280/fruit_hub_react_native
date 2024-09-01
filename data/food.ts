@@ -28,7 +28,7 @@ const dataMakanan : food[] = [
         title:"Quinoa fruit salad",
         poster:require('@/assets/images/food3.png'),
         price:8000,
-        color:'rgba(145,103,252,0.12)'
+        color:'red'
     }
 ]
 

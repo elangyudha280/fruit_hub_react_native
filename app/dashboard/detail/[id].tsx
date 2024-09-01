@@ -73,7 +73,6 @@ function DetailFood() {
                                     {formatRupiah(detailFood?.price as number)}
                                 </Text>
                             </View>
-
                         </View>
                         {/* body */}
                         <View className='flex-1 
@@ -95,9 +94,7 @@ function DetailFood() {
 
                                 <View className='relative  flex  h-[70px] flex-row p-3'>
                                     <View className='flex-1 flex justify-center'>
-                                        <Pressable className={`w-[50px] h-full rounded-full  flex items-center justify-center
-                                             ${count<1 ? 'border-[0px] bg-[#f8a1cb36]' : 'border-[1px]'}
-                                            `}>
+                                        <Pressable className={`w-[50px] h-full rounded-full  flex items-center justify-center bg-[#f8a1cb36] `}>
                                         <Ionicons name="heart-outline" size={32} color="orange"/>
                                         </Pressable>
                                     </View>   
