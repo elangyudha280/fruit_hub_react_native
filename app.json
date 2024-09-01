@@ -1,32 +1,40 @@
 {
-    "expo": {
-      "name": "fruitHub",
-      "slug": "fruitHub",
-      "scheme": "my-app",
-      "version": "1.0.0",
-      "orientation": "default",
-      "icon": "./assets/images/icon.png",
-      "userInterfaceStyle": "light",
-      "splash": {
-        "image": "./assets/images/splash.png",
-        "resizeMode": "contain",
+  "expo": {
+    "name": "fruitHub",
+    "slug": "fruitHub",
+    "scheme": "my-app",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive.png",
         "backgroundColor": "#ffffff"
       },
-      "ios": {
-        "supportsTablet": true
+      "package": "com.elangyudha280.fruitHub"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
       },
-      "android": {
-        "adaptiveIcon": {
-          "foregroundImage": "./assets/images/adaptive-icon.png",
-          "backgroundColor": "#ffffff"
-        }
-      },
-      "web": {
-        "favicon": "./assets/images/favicon.png"
-      },
-      "plugins": [
-        "expo-router"
-      ]
+      "eas": {
+        "projectId": "9f5107ba-c884-427f-b5de-b652ef247f65"
+      }
     }
   }
-  
+}

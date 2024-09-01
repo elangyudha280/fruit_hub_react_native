@@ -14,6 +14,7 @@ import { State } from 'react-native-gesture-handler'
 function PageDashboard() {
 
     let name = useUser((state:any) => state.name)
+    
     const goToDetail = (id:number|string)=>{
         router.push(`dashboard/detail/${id}`)
     }
@@ -66,7 +67,7 @@ function PageDashboard() {
                                     return (
                                         <Pressable
                                         onPress={()=>{goToDetail(el.id)}}
-                                        className={`relative w-full h-full  p-5 rounded-md bg-[${el.color}]`} key={el.id}>
+                                        className={`relative w-full h-full  p-5 rounded-md bg-[#ffae6328]`} key={el.id}>
                                                  <Image source={require('@/assets/images/love_orange.png')} className='scale-150 absolute right-5 top-[20px]'/>
                                                 {/* header */}
                                                 <View className='w-full flex items-center'>
