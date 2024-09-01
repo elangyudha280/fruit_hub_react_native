@@ -43,6 +43,11 @@ function PageDashboard() {
                         {/* //! input filter */}
                         <Image source={require('@/assets/images/bar.png')} className='self-center ml-3'/> 
                     </View>
+
+                    {/*//! card content */}
+                    <View className='relative w-full mt-7'>
+                        <Text className='text-c-iris-500 text-2xl  font-bold'>Recommended Combo</Text>
+                    </View>
                 </View>
                 
             </ScrollView>
